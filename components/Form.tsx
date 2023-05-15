@@ -28,14 +28,19 @@ const Form = () => {
             </p>
             <div className="mb-4 flex flex-col">
                 <label htmlFor="password" className="font-normal text-base">Create pasword</label>
-                <input type="password" name="password" id="password" defaultValue='password' className="text-xs font-normal text-placeholder shadow-box w-[400px] h-10 rounded p-4 border border-placeholder outline-none
-                mt-1 mb-2"  />
+                <div className='flex relative'>
+                    <input type={show ? 'text' : 'password'} name="password" id="password" defaultValue='password' className="text-xs font-normal text-placeholder shadow-box w-[400px] h-10 rounded p-4 border border-placeholder outline-none
+                mt-1 mb-2 "  />
+                    {
+                        show ? <BiShow className='absolute right-2 top-3 cursor-pointer' size={20} onClick={() => setShow((prev) => !prev)} /> : <BiHide className='absolute right-2 top-3 cursor-pointer' size={20} onClick={() => setShow((prev) => !prev)} />
+                    }
+                </div>
                 <p className="text-xs text-placeholder">Password must contain a minimum of 8 characters</p>
                 <p className="text-xs text-placeholder">Password must contain at least one symbol e.g. @, !</p>
             </div>
             <p className="mb-4 flex flex-col">
                 <label htmlFor="location" className="font-normal text-base">Location <span className="text-xs text-placeholder">(Optional)</span> </label>
-                <select name="location" id="location" className="text-xs font-normal text-placeholder shadow-box w-[400px] h-10 rounded p-4 border border-placeholder outline-none
+                <select name="location" id="location" className="text-xs font-normal shadow-box text-placeholder px-4 w-[400px] h-10 rounded  border border-placeholder outline-none
                 mt-1" >
                     <option value="Nepal">Nepal</option>
                     <option value="India">India</option>
