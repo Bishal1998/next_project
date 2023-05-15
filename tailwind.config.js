@@ -7,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'placeholder': '#CCCCCC',
+        'rectange': '#27485D',
+        'link': '#476D73',
+      },
+      boxShadow: {
+        'box': '0px 2px 2px 2px rgba(204, 204, 204, 0.1)',
+        'rectangle': '0px 2px 2px 2px rgba(204, 204, 204, 0.1)',
+
+      },
     },
   },
   plugins: [],

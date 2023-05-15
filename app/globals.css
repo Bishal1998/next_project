@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.quoteBg {
+    background: linear-gradient(162.21deg, #517879 4.83%, #1E3E57 103.44%);
+}
