@@ -1,5 +1,6 @@
 import { Itim } from 'next/font/google';
 import './globals.css'
+import { AppContext } from '@/context/Context';
 
 const font = Itim({
   subsets: ['latin'],
